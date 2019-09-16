@@ -1,0 +1,82 @@
+\relax 
+\citation{xiazamirhe2018gibsonenv}
+\citation{garcia2015vision}
+\citation{ulrich2000appearance}
+\citation{sunderhauf2012switchable}
+\citation{pronobis2006discriminative}
+\citation{ranganathan2006rao}
+\citation{kosecka2003qualitative }
+\citation{agarwal2013robust}
+\citation{ranganathan2006bayesian}
+\citation{ranganathan2006bayesian}
+\select@language{english}
+\@writefile{toc}{\select@language{english}}
+\@writefile{lof}{\select@language{english}}
+\@writefile{lot}{\select@language{english}}
+\@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}}
+\@writefile{toc}{\contentsline {section}{\numberline {II}Methodology}{1}}
+\citation{he2016deep}
+\citation{imagenet_cvpr09}
+\citation{johnson2019survey}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Overall formulation presented with input as Pose-graph and CNN based classifier to classify regions. These classification labels are used to propose potentially similar regions in pose-graph using topological instance comparator which generates more constraints for pose graph. Additionally we generate topologically consistent graph called Manhattan graph which helps add more constraints in pose-graph eventually giving more relevant constraints to pose-graph to increase accuracy. The blue dotted arrow shows the start of the pipeline and then follows a feedback like structure.}}{2}}
+\newlabel{fig:fig1_pipeline}{{1}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {II-A}Topological Categorization and Graph Construction}{2}}
+\newlabel{sec:semantic_place_cat}{{II-A}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {II-B}Manhattan Graph Construction and Constraint Prediction using MLP}{2}}
+\newlabel{manhatten_construction}{{II-B}{2}}
+\citation{bromley1994signature}
+\citation{kummerle2011_g2o}
+\citation{kaess2008isam}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces We demonstrate the detection of similar nodes using MLP. Along each row we show image pairs along with its manhattan trajectory map and the location of both image pairs on the manhattan map. The gray dotted box indicate the location of the overlapping intersection nodes which belong to the same topology in the global manhattan map. The gray dotted arrow points to the overlapping intersection nodes shown zoomed-in. The black arrows in the opposite direction depict the same region but viewed from opposite directions by the robot. The top row shows the location of a particular 3-way intersection region from opposite views which belong to the same topology. The bottom row shows the location of a particular 4-way intersection region from opposite views which belong to the same topology. We denote the forward viewpoint of the 3-way intersection by A1. A2 denotes the same intersection from a backward viewpoint. B1 denotes the forward viewpoint of the 4-way intersection. B2 denotes the same 4-way interction from the opposite backward viewpoint. We demonstrate detection of similar nodes which belong to the same topology at opposite viewpoints which is known to be a difficult task.}}{3}}
+\newlabel{fig:boat22}{{2}{3}}
+\citation{sunderhauf2011brief}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Architecture of the Multilayer Perceptron. The architecture is a siamese like network where we pass the $4 \times 1$ input to the 2-layered MLP and we get an $8 \times 1$ output for each node. We do this for both nodes to be compared and then perform a contrastive loss on both the outputs so as to condition the output vectors based on whether the node-pair's ground truth label is same(S) or different(D). The dotted boxes denote sharing of the network weights.}}{4}}
+\newlabel{fig:MLP_fig}{{3}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {II-C}Pose Graph Optimization}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {III}Experimentation and Results}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {III-A}Topological Categorization in a Real Warehouse Setting}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {III-B}Efficacy of Loop Closure Constraint Prediction using MLP}{4}}
+\citation{kaess2008isam}
+\@writefile{loa}{\contentsline {algocf}{\numberline {1}{\ignorespaces Strategy for optimizing pose-graph with Manhattan and topological constraints.}}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces We start with the unoptimized Pose Graph with drift (shown by dotted-blue arrow) and obtain its Manhattan Graph. The nodes of the Manhattan graph are then passed to the Topological Instance Comparator which acts like a Topological Instance comparator and gives out node pairs which belong to the same topology. This is then passed to the Pose Graph Optimizer which gives us optimized Pose Graph. We then obtain the Manhattan graph of the optimized Pose Graph. The nodes of this graph are passed to the Topological Instance comparator which gives us improved(more accurate) loop pairs. This complete pipeline is done multiple times in a cyclic manner till convergence. We finally get a registered map which is shown in the center.}}{5}}
+\newlabel{fig:Posegraph Optimization pipeline}{{4}{5}}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces CNN Classification Results.}}{5}}
+\newlabel{CNN_accuracy_conf_results}{{I}{5}}
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces MLP Results. }}{5}}
+\newlabel{CNN_results_accuracy}{{II}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {III-C}Pose graph optimization Results}{5}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {III-C.1}Stages of Map Recovery}{5}}
+\citation{agarwal2013robust}
+\citation{agarwal2013robust}
+\citation{sturm2012benchmark}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {III-C.2}Qualitative Results}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {III-D}Robustness Analysis}{6}}
+\newlabel{sec:robust_analysis}{{III-D}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Effect of Robust pose-graph optimization with DCS}}{6}}
+\newlabel{fig:failure_analysis}{{5}{6}}
+\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Absolute Trajectory Error(ATE) and Relative Pose Error (RPE) \cite  {sturm2012benchmark} for various pose-graphs with respect to ground-truth trajectories}}{6}}
+\newlabel{tab: ate_comparison}{{III}{6}}
+\@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces MLP Performance}}{6}}
+\newlabel{tab:my_label}{{IV}{6}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Conclusion and Future Work}{6}}
+\bibstyle{unsrt}
+\bibdata{citations}
+\bibcite{xiazamirhe2018gibsonenv}{1}
+\bibcite{garcia2015vision}{2}
+\bibcite{ulrich2000appearance}{3}
+\bibcite{sunderhauf2012switchable}{4}
+\bibcite{pronobis2006discriminative}{5}
+\bibcite{ranganathan2006rao}{6}
+\bibcite{agarwal2013robust}{7}
+\bibcite{ranganathan2006bayesian}{8}
+\bibcite{he2016deep}{9}
+\bibcite{imagenet_cvpr09}{10}
+\bibcite{johnson2019survey}{11}
+\bibcite{bromley1994signature}{12}
+\bibcite{kummerle2011_g2o}{13}
+\bibcite{kaess2008isam}{14}
+\bibcite{sunderhauf2011brief}{15}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Top row shows unoptimized trajectories, middle row shows trajectories recovered using our pipeline and last row shows ground truth trajectories. Length in metres is shown along X and Y axes.}}{7}}
+\newlabel{fig:trajectory_recovery}{{6}{7}}
+\@writefile{toc}{\contentsline {section}{References}{7}}
+\bibcite{sturm2012benchmark}{16}
